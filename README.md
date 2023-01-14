@@ -14,7 +14,7 @@ The UDR was created on January 14th, 2023.
 - Semester 1
     - Innovation Fair (winners)
 
-## Contributors
+## Maintainers
 
 The UDR is maintained by Aakash Chauhan
 
