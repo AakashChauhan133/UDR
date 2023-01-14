@@ -7,7 +7,7 @@ The repository contains a total of 20 questions, which cover a variety of topics
 ## Directory of Data
 
 1. WAP to find roots of a quadratic equation, equation is of the form (ax2+bx+c=0)
-2. Write a C program to input electricity unit and calculate total electricity bill according to the given condition.
+2. Write a C program to input electricity unit and calculate total electricity bill according to the given condition. \newline
     For first 50 units Rs 0.50 per unit
     For next 100 units Rs 0.75 per unit
     For next 100 units Rs 1.20 per unit
@@ -17,21 +17,20 @@ The repository contains a total of 20 questions, which cover a variety of topics
 4. Write a C program to find maximum and minimum among n integer number.
 5. Write a program to print following series: 0 3 8 15 24 35 48 …. Upto n term.
 6. Write a program to print all the prime numbers between the range m and n.
-7. Write a program to print following pattern:
-
+7. Write a program to print following pattern: \newline
     \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\*  
     \* \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\* \*  
     \* \* \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\* \* \*  
     \* \* \* \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\* \* \* \*  
     \* \* \* \* \* \* \* \* \* \*  
 8. Write a C program to input n integer numbers from user and print reverse of each number.
-9. Write a C program to find sum of following series:
+9. Write a C program to find sum of following series:\newline
     1 + 1/3! + 1/5! + 1/7! + … 1/n!
-10. Input n numbers in an array and find the nearest lesser and nearest greater element than a given element.
-    Example: a[] ={ 3,6,2,1,8,6,3,4,10,15]
-    Let input x= 8
+10. Input n numbers in an array and find the nearest lesser and nearest greater element than a given element. \newline
+    Example: a[] ={ 3,6,2,1,8,6,3,4,10,15} \newline
+    Let input x= 8 \newline
     Output: nearest lesser 6 nearest greater 10
-11. Input n characters in an array and replace the characters as per the given instructions:
+11. Input n characters in an array and replace the characters as per the given instructions: \newline
     Replace all capital vowels with symbol $.
     Replace all the capital consonant with symbol #.
     Replace all small letter vowels with symbol *.
@@ -44,7 +43,7 @@ The repository contains a total of 20 questions, which cover a variety of topics
 14. Input a matrix of order m x n. Print the sum of all the odd elements present in each row and all the odd elements present in each column.
 15. Input a matrix of order m x n and print the square of elements in principal diagonal and cubes of secondary diagonal.
 16. Write a user defined function to print Fibonacci series.
-17. Write a menu driven program using functions that can perform the following tasks on pressing given keys:
+17. Write a menu driven program using functions that can perform the following tasks on pressing given keys: \newline
     1. Check a number is odd or even.
     2. Print reverse of a number.
     3. Print sum of series 1+3+5+7+9……upto n
