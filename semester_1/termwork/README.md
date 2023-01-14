@@ -28,8 +28,8 @@ The repository contains a total of 20 questions, which cover a variety of topics
 9. Write a C program to find sum of following series:
     1 + 1/3! + 1/5! + 1/7! + … 1/n!
 10. Input n numbers in an array and find the nearest lesser and nearest greater element than a given element.
-    Example: a[] ={ 3,6,2,1,8,6,3,4,10,15]
-    Let input x= 8
+    Example: a[] ={ 3,6,2,1,8,6,3,4,10,15}
+    Let input x = 8
     Output: nearest lesser 6 nearest greater 10
 11. Input n characters in an array and replace the characters as per the given instructions:
     Replace all capital vowels with symbol $.
