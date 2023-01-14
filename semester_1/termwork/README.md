@@ -19,10 +19,10 @@ The repository contains a total of 20 questions, which cover a variety of topics
 6. Write a program to print all the prime numbers between the range m and n.
 7. Write a program to print following pattern:
 
-    \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\*  
-    \* \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \* \*  
-    \* \* \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \* \* \*  
-    \* \* \* \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\* \* \* \*  
+    \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\*  
+    \* \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\* \*  
+    \* \* \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\* \* \*  
+    \* \* \* \*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\* \* \* \*  
     \* \* \* \* \* \* \* \* \* \*  
 8. Write a C program to input n integer numbers from user and print reverse of each number.
 9. Write a C program to find sum of following series:
