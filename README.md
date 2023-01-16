@@ -11,7 +11,7 @@ The UDR was created on January 14th, 2023.
 
 ## Data Sets
 
-- Semester 1
+### - Semester 1
     - Innovation Fair (winner)
     - Lab Work
     - Term Work
