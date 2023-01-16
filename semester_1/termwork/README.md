@@ -1,4 +1,4 @@
-# Tearm Work 2022-2023
+# Term Work 2022-2023
 
 ## Description
 
