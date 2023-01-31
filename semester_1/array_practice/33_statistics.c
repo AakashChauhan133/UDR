@@ -18,7 +18,5 @@ int main()
     for (i = 0; i < n; i++)
         scanf("%d", &a[i]);
 
-
-
-return 0;
+    return 0;
 }
