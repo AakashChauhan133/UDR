@@ -31,7 +31,8 @@ int main()
 	printf("\n");
 
 	// Logic
-
+	
+	// This method work wehn there is no duplicate elements
 	// bubble(nums, n);
 	// printf("\nThird largest element is %d\n", nums[n - 3]);
 
