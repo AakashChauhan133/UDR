@@ -62,27 +62,24 @@ int bubble(int nums[], int numsSize)
 int Method2(int nums[], int numsSize)
 {
 	int max1, max2, max3;
-	max1 = max2 = max3 = nums[0];
+	max1 = max2 = max3 = -1;
 
-	for (int i = 1; i < numsSize; i++)
+	for (int i = 0; i < numsSize; i++)
 	{
-		if (max1 < nums[i])
+		if (nums[i] > max1 && max1 != nums[i])
 		{
 			max3 = max2;
 			max2 = max1;
 			max1 = nums[i];
-			printf("if 1 :%d %d %d\n", max1, max2, max3);
 		}
-		else if (max2 < nums[i] && nums[i] != max1)
+		else if (nums[i] > max2 && max1 != nums[i] && max2 != nums[i])
 		{
 			max3 = max2;
 			max2 = nums[i];
-			printf("if 2 :%d %d %d\n", max1, max2, max3);
 		}
-		else if (max3 < nums[i] && nums[i] != max1 && nums[i] != max2)
+		else if(nums[i] > max3 && max1 != nums[i] && max2 != nums[i] && max3 != nums[i])
 		{
 			max3 = nums[i];
-			printf("if 3 :%d %d %d\n", max1, max2, max3);
 		}
 	}
 

@@ -22,7 +22,7 @@ int main()
 	printf("Enter the number: ");
 	scanf("%d", &a);
 
-	Method1(a);
+	// Method1(a);
 	Method2(a);
 	return 0;
 }
@@ -62,13 +62,14 @@ void Method2(int a)
 		a /= 10;
 	}
 	a = temp;
-	for (int i = count; i > count; i--)
+	for (int i = count; i > 0; i--)
 	{
-		if (!((a % (int)(pow(10,i)) % 2)))
+		// if (!((a % (int)pow(10, i)) % 2))
 		{
-			printf("Even in digit: %d\n", a % 10);
+			printf("Even is digit: %d\n", (a % (int)pow(10, i)));
 			flag = 1;
 		}
+		// printf("pow %d, i %d\n", (int)pow(10, i), i);
 	}
 	// in case no even found
 	if (!flag)
