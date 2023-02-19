@@ -8,13 +8,10 @@
 
 #include <stdio.h>
 
-int bubble(int[], int);
-int Method2(int[], int);
-
 int main()
 {
 	// Local decleration
-	int nums[100], n, i;
+	int nums[100], n, i, max1, max2, max3;
 
 	// Input Section
 	printf("Enter the numbers of elements of array: ");
@@ -32,39 +29,8 @@ int main()
 
 	// Logic
 	
-	// This method work wehn there is no duplicate elements
-	// bubble(nums, n);
-	// printf("\nThird largest element is %d\n", nums[n - 3]);
-
-	// Method 2
-	printf("\nThird largest element from method 2 is %d\n\n", Method2(nums, n));
-
-	return 0;
-}
-
-int bubble(int nums[], int numsSize)
-{
-	int temp;
-	for (int i = 0; i < numsSize; i++)
-	{
-		for (int j = 0; j < numsSize - i - 1; j++)
-		{
-			if (nums[j] > nums[j + 1])
-			{
-				temp = nums[j];
-				nums[j] = nums[j + 1];
-				nums[j + 1] = temp;
-			}
-		}
-	}
-}
-
-int Method2(int nums[], int numsSize)
-{
-	int max1, max2, max3;
-	max1 = max2 = max3 = -1;
-
-	for (int i = 0; i < numsSize; i++)
+	max1 = max2 = max3 = -128;
+	for (i = 0; i < n; i++)
 	{
 		if (nums[i] > max1 && max1 != nums[i])
 		{
@@ -82,6 +48,8 @@ int Method2(int nums[], int numsSize)
 			max3 = nums[i];
 		}
 	}
+	printf("\nThird largest element from method 2 is %d\n\n", max3);
 
-	return max3;
+	return 0;
 }
+
