@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include <math.h>
 
-
 int isprime(int);
 int isArm(int);
 
