@@ -76,13 +76,14 @@ void Method2()
 	
 	// Input Section
 	printf("Enter the First string : ");
-	fgets(str1, 20, stdin);
+	fgets(str1, 7, stdin);
+	getchar();
 	printf("Enter the Second string : ");
-	fgets(str2, 20, stdin);
+	fgets(str2, 8, stdin);
 	
 	// Logic
-	for (strlen1 = 0; str2[strlen1] != '\0'; strlen1++);
-	strlen1 = strlen1 - 1;
+	for (strlen1 = 0; str1[strlen1] != '\0'; strlen1++);
+	// strlen1 = strlen1 - 1;
 	for (i = 0; str2[i] != '\0'; i++)
 		str1[strlen1++] = str2[i];
 	str1[strlen1] = '\0';

@@ -99,6 +99,52 @@ int main()
 					break;
 				}
 			}
+			else if (d == 5)
+			{
+				switch (r % 10)
+				{
+				case 0:
+					printf("Fifty ");
+					break;
+				}
+			}
+			else if (d == 6)
+			{
+				switch (r % 10)
+				{
+				case 0:
+					printf("Sixty ");
+					break;
+				}
+			}
+			else if (d == 7)
+			{
+				switch (r % 10)
+				{
+				case 0:
+					printf("Seventy ");
+					break;
+				}
+			}
+
+			else if (d == 8)
+			{
+				switch (r % 10)
+				{
+				case 0:
+					printf("Eighty ");
+					break;
+				}
+			}
+			else if (d == 9)
+			{
+				switch (r % 10)
+				{
+				case 0:
+					printf("Ninety ");
+					break;
+				}
+			}
 		}
 		switch (d)
 		{
