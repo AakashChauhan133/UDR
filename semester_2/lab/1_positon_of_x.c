@@ -1,9 +1,9 @@
 /*
-	Author: Aakash Chauhan
-	Date: February 13, 2023
-
-	Program: Find position of given element in given array
-*/
+ *	Author: Aakash Chauhan
+ *	Date: February 13, 2023
+ *
+ *	Program: Find position of given element in given array
+ */
 
 #include <stdio.h>
 
