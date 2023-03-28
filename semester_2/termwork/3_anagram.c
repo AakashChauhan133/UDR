@@ -1,8 +1,10 @@
 /*
-    Author: Aakash Chauhan
-    Date: March 22, 2023
-    Problem: Write a C program to check if the two strings entered by user are anagrams or not. Two words are Said to be anagrams if the letters of one word can be rearranged to form the other word.
-*/
+ *  Name: Aakash
+ *  University Roll No: 2021931
+ *  Section: M
+ *  Problem statement: Write a C program to check if the two strings entered by user are anagrams or not. Two words are Said to be anagrams if the letters of one word can be rearranged to form the other word.
+ *      For example: HEART and EARTH are anagrams of each other.
+ */
 
 #include <stdio.h>
 
@@ -10,10 +12,10 @@ int main()
 {
     // Local decleration
     char s1[100], s2[100], front;
-    int i, l, trace[57] = {0}, count, flag;
+    int i, l, l1, trace[57] = {0}, count, flag;
 
     // Input Section
-    printf("\n/********** Input**********/\n");
+    printf("\n/********** INPUT **********/\n");
     printf("Enter First String\n");
     l = 0;
     while (1)
@@ -24,40 +26,48 @@ int main()
         l++;   
     }
     s1[l] = 0;
-    printf("Enter Second\n");
-    l = 0;
+    printf("Enter Second string\n");
+    l1 = 0;
     while (1)
     {
-        scanf("%c", &s2[l]);
-        if (s2[l] == '\n')
+        scanf("%c", &s2[l1]);
+        if (s2[l1] == '\n')
             break;
-        l++;   
+        l1++;   
     }
-    s2[l] = 0;
+    s2[l1] = 0;
 
     // Logic 
-    for (i = 0; s1[i] != 0; i++)
-        trace[s1[i] - 65]++;
-    flag = 1;
-    for(i = 0; i < l; i++)
+    if (l1 != l)
+        flag = 0;
+    else
     {
-        count = 1;
-        for (int j = i + 1; j < l; j++)
+        // Traceing string
+        for (i = 0; s1[i] != 0; i++)
+            trace[s1[i] - 65]++;
+        flag = 1;
+        for(i = 0; i < l; i++)
         {
-            if (s2[i] == s2[j])
+            count = 1;
+            for (int j = i + 1; j < l; j++)
             {
-                count++;
-                s2[j] = s2[l - 1];
-                l--, j--;
+                if (s2[i] == s2[j])
+                {
+                    count++;
+                    s2[j] = s2[l - 1];
+                    l--, j--;
+                }
             }
-        }
-        if (trace[s2[i] - 65] != count)
-        {
-            flag = 0;
-            break;
+            if (trace[s2[i] - 65] != count)
+            {
+                flag = 0;
+                break;
+            }
         }
     }
 
+    // Output Section
+    printf("\n/********** OUTPUT **********/\n");
     if (flag)
         printf("Anagram\n");
     else

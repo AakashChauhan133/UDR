@@ -1,9 +1,13 @@
-/*
-    Author: Aakash Chauhan
-    Date: March 22, 2023
-    Problem: Write a C program to enter a string and print the particular character which occurred the most with its frequency.
-*/
 
+/*
+ *  Name: Aakash
+ *  University Roll No: 2021931
+ *  Section: M
+ *  Problem statement: Write a C program to enter a string and print the particular character which occurred the most with its frequency.
+ *      Example
+ *          Input String: HELLLOO
+ *          Output: L 3
+ */
 #include <stdio.h>
 
 int main()
@@ -13,6 +17,7 @@ int main()
     int i, l, trace[57] = {0}, max;
 
     // Input Section
+    printf("/********** INPUT **********/\n");
     printf("Enter the string\n");
     l = 0;
     while (1)
@@ -20,11 +25,12 @@ int main()
         scanf("%c", &s[l]);
         if (s[l] == '\n')
             break;
-        l++;   
+        l++;
     }
     s[l] = 0;
 
     // Logic
+    // Tracing string
     for (i = 0; s[i] != 0; i++)
         if ((s[i] >= 65 && s[i] <= 90) || (s[i] >= 97 && s[i] <= 122))
             trace[s[i] - 65]++;
@@ -39,6 +45,8 @@ int main()
     }
 
     // Output Section
-    printf("\n%c %d\n", freqChar, max);
+    printf("\n/********** OUTPUT **********/\n");
+    printf("%c %d\n", freqChar, max);
+
     return 0;
 }

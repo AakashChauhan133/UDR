@@ -1,8 +1,9 @@
 /*
-    Author: Aakash Chauhan
-    Date: March 22, 2023
-    Problem: Write a C program that takes your full name (First, middle and last) as input and displays the abbreviations of the first and middle names except the last name which is displayed as it is.
-*/
+ *  Name: Aakash
+ *  University Roll No: 2021931
+ *  Section: M
+ *  Problem statement: Write a C program that takes your full name (First, middle and last) as input and displays the abbreviations of the first and middle names except the last name which is displayed as it is.
+ */
 
 #include <stdio.h>
 
@@ -21,11 +22,12 @@ int main()
         scanf("%c", &s[l]);
         if (s[l] == '\n')
             break;
-        l++;   
+        l++;
     }
     s[l] = 0;
 
-    // Logic
+    // Logic and Output Section
+    printf("\n/********** OUTPUT **********/\n");
     for (i = 0; s[i] != 0; i++)
         if (s[i] != 32)
         {
