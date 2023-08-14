@@ -1,4 +1,11 @@
 /*
+ *	Author	:	Aakash Chauhan
+ *	Date	:	8 August, 2023
+ *	Implimentation of User access matrix using files
+ */
+
+
+/*
 	0 = read
 	1 = write
 	2 = execute
@@ -12,7 +19,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void selectfile(char *,int);
+void selectfile(char *, int);
 void read(char *);
 void write(char *);
 void execute(char *);
@@ -20,30 +27,30 @@ void execute(char *);
 int main()
 {
 	FILE *f;
-	
+
 	char s[10] = "filex.txt", mode;
 	int user = -1, file = -1;
-	int access[10][10] = {	{0, 1, 2, -1, -1, -1, -1, -1, -1, -1},
-							{-1, 0, 1, 2, -1, -1, -1, -1, -1, -1},
-							{-1, -1, 0, 1, 2, -1, -1, -1, -1, -1},
-							{-1, -1, -1, 0, -1, -1, -1, -1, -1, -1},
-							{6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
-							{6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
-							{-1, -1, -1, -1, -1, -1, 1, 1, -1, -1},
-							{6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
-							{0, 0, 0, 0, 0, 2, 2, 2, 2, 2},
-							{3, 3, 3, 3, 2, 2, 2, 2, 2, 2}};
+	int access[10][10] = {{0, 1, 2, -1, -1, -1, -1, -1, -1, -1},
+						  {-1, 0, 1, 2, -1, -1, -1, -1, -1, -1},
+						  {-1, -1, 0, 1, 2, -1, -1, -1, -1, -1},
+						  {-1, -1, -1, 0, -1, -1, -1, -1, -1, -1},
+						  {6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
+						  {6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
+						  {-1, -1, -1, -1, -1, -1, 1, 1, -1, -1},
+						  {6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
+						  {0, 0, 0, 0, 0, 2, 2, 2, 2, 2},
+						  {3, 3, 3, 3, 2, 2, 2, 2, 2, 2}};
 	printf("Enter the user ID: ");
 	scanf("%d", &user);
 	printf("Enter the file number to access: ");
 	scanf("%d", &file);
 	selectfile(s, file);
-	
+
 	if (access[user - 1][file - 1] == -1)
 	{
 		printf("No Access\n");
 	}
-		
+
 	else if (access[user - 1][file - 1] == 0)
 	{
 		printf("Read Access\n");
@@ -69,7 +76,7 @@ int main()
 		{
 			read(s);
 		}
-		else if(mode == 'w')
+		else if (mode == 'w')
 		{
 			write(s);
 		}
@@ -84,7 +91,7 @@ int main()
 		{
 			read(s);
 		}
-		else if(mode == 'e')
+		else if (mode == 'e')
 		{
 			execute(s);
 		}
@@ -99,7 +106,7 @@ int main()
 		{
 			execute(s);
 		}
-		else if(mode == 'w')
+		else if (mode == 'w')
 		{
 			write(s);
 		}
@@ -114,25 +121,24 @@ int main()
 		{
 			read(s);
 		}
-		else if(mode == 'w')
+		else if (mode == 'w')
 		{
 			write(s);
 		}
-		else if(mode == 'e')
+		else if (mode == 'e')
 		{
 			execute(s);
 		}
 	}
-	
-	
+
 	return 0;
 }
 
-
-void read(char *s){
+void read(char *s)
+{
 	char ch;
 	FILE *f;
-	
+
 	f = fopen(s, "r");
 	if (!f)
 	{
@@ -147,11 +153,12 @@ void read(char *s){
 	fclose(f);
 }
 
-
-void write(char *s){
+void write(char *s)
+{
+	// Write text in file and preview of enterd text
 	char ch;
 	FILE *f;
-	
+
 	f = fopen(s, "w");
 	if (!f)
 	{
@@ -167,21 +174,30 @@ void write(char *s){
 	read(s);
 }
 
-void execute(char *s){
+void execute(char *s)
+{
 	printf("Feature Not Avialable\n");
 	return;
 }
 
 void selectfile(char *s, int id)
-{	
+{
+	/*
+		This funtion take a dummy name as string and file id
+		and inset id before the extention of file 
+		eg: 
+			input	:	s[] = "filex.txt"	id = 1
+			output	:	s[] = "file1.txt"
+		
+		This function helps to open multiple files just by entering file id (eg: 1, 2, 3, ...)
+	*/
 	int i;
 	for (i = 0; s[i] != 0; i++)
 	{
-		if(s[i] == '.')
+		if (s[i] == '.')
 		{
 			s[i - 1] = id + 48;
 			return;
 		}
 	}
 }
-
