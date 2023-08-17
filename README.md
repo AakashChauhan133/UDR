@@ -18,6 +18,15 @@ The UDR was created on January 14th, 2023.
     - Array Practice
     - Doubt Questions of other students
 
+
+### - Semester 2
+    - Lab Work
+    - Term Work
+    - Practice
+    
+### - Semester 2
+    - Lab Work
+
 ## Maintainers
 
 The UDR is maintained by Aakash Chauhan

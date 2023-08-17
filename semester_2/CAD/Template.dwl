@@ -1,3 +1,0 @@
-Lenovo
-AAKASH 
-21 April 2023  06:47:19
