@@ -38,7 +38,7 @@ The Assignment 1 was created on August 12th, 2023.
 >           M N
 >           O
 >       __________________
->
+
 >       3 Patterns
 >       ________________
 >         1
