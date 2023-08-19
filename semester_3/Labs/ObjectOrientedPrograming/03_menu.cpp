@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int isPrime();
+void isPrime();
 void checkSmall();
 
 int main()
@@ -29,15 +29,22 @@ int main()
         default:
             cout << "Invalid Input" << endl;
         }
-    } while (ch);
+    }
+    while (ch);
+    return 0;
 }
 
-int isPrime()
+void isPrime()
 {
     int a;
     int i, f = 0;
     cout << "Enter a number to check for prime" << endl;
     cin >> a;
+    if (a == 1)
+    {
+        cout << "Neither prime nor composite" << endl;
+        return;
+    }
     for (i = 2; i <= a / 2; i++)
     {
         if (!(a % i))
@@ -49,10 +56,10 @@ int isPrime()
     if (f)
     {
         cout << "Composite Number" << endl;
-        return 0;
+        return;
     }
     cout << "Prime number" << endl;
-    return 1;
+    return;
 }
 void checkSmall()
 {

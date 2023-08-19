@@ -42,7 +42,7 @@ int isPrime(int a)
             break;
         }
     }
-    if (f)
+    if (f || a == 1)
     {
         printf("not prime");
         return 0;

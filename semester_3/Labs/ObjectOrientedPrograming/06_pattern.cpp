@@ -5,14 +5,14 @@ using namespace std;
 
 void pattern1(int);
 void pattern2(int);
-// void pattern3(int);
+void pattern3(int);
 
 int main()
 {
     int n;
     cout << "Enter the value of n: ";
     cin >> n;
-    pattern1(n);
+    pattern3(n);
 }
 
 void pattern1(int n)
@@ -32,5 +32,28 @@ void pattern1(int n)
 
 void pattern2(int n)
 {
-    int arr[MAX];
+    int i, j;
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            cout << (2 * i + 1 + (2 * j)) % (2 * n) << " ";
+        }
+        cout << endl;
+    }
+}
+
+void pattern3(int n)
+{
+    int i, j;
+
+    for (i = 1; i <= n; i++)
+    {
+        for (j = 1; j <= n; j++)
+        {
+            cout << ((i < j) ? j : i) << " ";
+        }
+        cout << endl;
+    }
+
 }
