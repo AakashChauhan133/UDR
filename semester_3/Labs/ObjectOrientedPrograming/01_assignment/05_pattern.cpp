@@ -1,3 +1,22 @@
+/*
+ *  Author  :   Aakash Chauhan
+ *  Date    :   August 12, 2023
+ *  2 Patterns
+ *__________________
+ *      1
+ *     121
+ *    12321
+ *   1234321
+ *  123454321
+ *__________________
+ *  A B C D E
+ *  F G H I
+ *  J K L
+ *  M N
+ *  O
+ *__________________
+ */
+
 #include <iostream>
 
 using namespace std;
@@ -11,6 +30,8 @@ int main()
     cout << "Enter the value of n: ";
     cin >> n;
     pattern2(n);
+
+    return 0;
 }
 
 void pattern1(int n)
@@ -24,7 +45,7 @@ void pattern1(int n)
             cout << " ";
         for (j = -2; j < 2 * i - 1; j++)
         {
-            cout << x;
+            cout << x ;
             if (f <= i)
                 x++, f++;
             else

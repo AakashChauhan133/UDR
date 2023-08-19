@@ -1,3 +1,11 @@
+/*
+ *  Author  :   Aakash Chauhan
+ *  Date    :   August 12, 2023
+ *
+ *  Special number
+ *          : number = product of(each digit) + sum of (each digit)
+ */
+
 #include <iostream>
 
 using namespace std;

@@ -1,3 +1,11 @@
+/*
+ *  Author  :   Aakash Chauhan
+ *  Date    :   August 12, 2023
+ *
+ *  Evil number
+ *          : Binary contain even number of 1's
+ */
+
 #include <iostream>
 #define MAX 16
 
@@ -21,11 +29,9 @@ int main()
 
     for (i = n - 1; i >= 0; i--)
     {
-        //        cout << b[i] << endl;
         if (b[i] == 1)
             c++;
     }
-    cout << c << endl;
     if (!(c % 2))
         cout << "This is evil number" << endl;
     else

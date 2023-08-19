@@ -1,3 +1,11 @@
+/*
+ *  Author  :   Aakash Chauhan
+ *  Date    :   August 12, 2023
+ *
+ *  Twin prime number
+ *          :   Prime with difference 2 (example. 5, 7)
+ */
+
 #include <iostream>
 
 using namespace std;

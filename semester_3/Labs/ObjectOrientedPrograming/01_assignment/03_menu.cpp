@@ -1,3 +1,13 @@
+/*
+ *  Author  :   Aakash Chauhan
+ *  Date    :   August 12, 2023
+ *
+ *  ************MENU************
+ *  [1] Check for prime or composite
+ *  [2] Find smallest digit of a number
+ *  [3] exit
+ */
+
 #include <iostream>
 
 using namespace std;
