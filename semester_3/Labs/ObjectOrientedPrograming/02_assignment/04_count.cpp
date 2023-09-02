@@ -1,8 +1,7 @@
 /*
  *  Author  :   Aakash Chauhan
  *  Date    :   August 19, 2023
- *
- *  Count the number of occurrence of each Character
+ *  Find occurrence of each char
  */
 
 #include <iostream>
@@ -23,7 +22,7 @@ int main()
     {
         c = 0;
         f = 1;
-        for (j = i - 1; j >= 0; j--)
+        for (j = i - 1; j >= 0;j--)
         {
             if (str.at(i) == str.at(j))
             {
@@ -31,7 +30,7 @@ int main()
                 break;
             }
         }
-        if (f && str.at(i) != 32)
+        if (f)
         {
             for (j = i; j < ln; j++)
             {

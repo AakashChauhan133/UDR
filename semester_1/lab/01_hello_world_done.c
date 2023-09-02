@@ -8,5 +8,6 @@ Program: To print hello world
 int main()         // starting main block
 {
     printf("hello world"); // printing to user
+    // getch();
     return 0;              // for sucsessfull ending of main function
 }

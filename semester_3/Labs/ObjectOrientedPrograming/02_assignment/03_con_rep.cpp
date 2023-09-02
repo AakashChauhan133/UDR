@@ -1,10 +1,7 @@
 /*
  *  Author  :   Aakash Chauhan
  *  Date    :   August 19, 2023
- *
- *  Remove the consecutive repeated characters
- *      INPUT – PROOOGGRAMMMMIIING
- *      OUTPUT – PROGRAMING
+ *  Delete adjacent repeating charachers
  */
 
 #include <iostream>

@@ -1,11 +1,9 @@
 /*
  *  Author  :   Aakash Chauhan
  *  Date    :   August 19, 2023
- *
- *  Input a sentence and two integers. These integers tell the word number and replace all the character of that word by its next character.
- *      Input   :   He has good tables.
-                    2 4
- *      Output  :   He ibt good ubcmft
+ *  Input   :   He has good tables
+ *              2 4
+ *  Output  :   He ibt good ubcmft
  */
 
 #include <iostream>
@@ -18,6 +16,7 @@ int main()
     string str;
     int a, b, i, co, val,ln;
 
+    cout << "Enter the string " << endl;
     getline(cin, str);
     ln =  str.length();
     cin >> a >> b;
@@ -31,11 +30,11 @@ int main()
         else if (co == a || co == b)
         {
             val = str.at(i);
-            val = (val - 65) % 26 + 66;
+            val = (val >= 97) ? ((val - 96) % 26)+ 97 : ((val - 64) % 26)+ 65;
             str[i] = val;
         }
     }
 
-    cout << str;
+        cout << str;
     return 0;
 }

@@ -1,9 +1,7 @@
 /*
  *  Author  :   Aakash Chauhan
  *  Date    :   August 19, 2023
- *
- *  Arrange all characters in following order.
- *      Digit + Uppercase + Lowercase + Special Characters
+ *  Rearrange the string in order =>    digit up_case lo_case spec_char
  */
 
 #include <iostream>

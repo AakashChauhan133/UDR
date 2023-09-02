@@ -1,8 +1,7 @@
 /*
  *  Author  :   Aakash Chauhan
  *  Date    :   August 19, 2023
- *
- *  Count number of uppercase, lowercase, vowel and digit characters in a given string.
+ *  Count number of uppercase, lowercase, vowels and digits in a string
  */
 
 #include <iostream>
