@@ -1,8 +1,7 @@
 /*
  *  Author      :   Aakash Chauhan
- *  Section     :   IoT
- *  Roll Number :   1
- *  Problem     :   Implimentation of queue
+ *  Date        :   August 24, 2023
+ *  Problem     :   Implimentation of queue call by value
  */
 
 #include <stdio.h>
@@ -32,6 +31,8 @@ int main()
         printf("[4] Display\n");
         printf("[5] Exit\n");
         scanf("%d", &choice);
+        
+        // calling according choice
         switch(choice)
         {
         case 1:
@@ -65,6 +66,9 @@ int main()
 // Definition of functions
 int enqueue(int q[], int rear)
 {
+    // Add element in the last of queue
+    // ie. add in the last of array(expand from last)
+
     int x;
     if (rear == MAX - 1)
     {
@@ -77,8 +81,12 @@ int enqueue(int q[], int rear)
     q[rear] = x;
     return rear;
 }
+
 int dequeue(int q[], int front)
 {
+    // Remove from front of queue
+    // remove first(this first is not always index 0) element of arrray(shrink array from front)
+
     if (front == -1)
     {
         printf("Empty Queue\n");
@@ -88,8 +96,11 @@ int dequeue(int q[], int front)
     front++;
     return front;
 }
+
 void peek(int q[], int front)
 {
+    // Print front value of queue
+    
     if (front == -1)
     {
         printf("Empty Queue\n");
@@ -97,8 +108,11 @@ void peek(int q[], int front)
     }
     printf("Peek element: %d \n", q[front]);
 }
+
 void display(int q[], int front, int rear)
 {
+    // Print array in forward manner from front to rear
+    
     int i;
     if (front == -1)
     {

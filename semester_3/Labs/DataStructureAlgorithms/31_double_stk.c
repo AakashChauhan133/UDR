@@ -10,6 +10,7 @@ typedef struct stack
 // Sending value of pointer (call by value)
 stk* push(stk *, int);
 
+void display(stk *);
 
 int main()
 {

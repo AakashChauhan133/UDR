@@ -1,7 +1,7 @@
 /*
  *  Author: Aakash Chauhan
  *  Date: Aug 3, 2023
- *  Program to check weather an array is in AP or not if not in AP find the one missing term
+ *  Program to check weather an array is in AP or not if not in AP find the one missing term (Dynamic array)
  */
 
 #include <stdio.h>
@@ -57,6 +57,7 @@ void newAP(int *a, int n)
 {
     // Fucntion of check weather given array is in AP or not
     // Property of AP there exist comman diffrence between all adjacent elements
+    // Note that first two terms must be correct so that diffrence can be determined correctly
     
     int i, diff, count = 0, val, indx;
     diff = *(a + 1) - *(a);

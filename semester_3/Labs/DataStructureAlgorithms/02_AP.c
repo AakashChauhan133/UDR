@@ -60,6 +60,11 @@ void checkAP(int *a, int n)
     // Property of AP there exist comman diffrence between all adjacent elements
     
     int i, diff;
+    if (n < 2)
+    {
+        printf("less than 2 elements\n");
+        return;
+    }
     diff = *(a) - *(a + 1);
     for (i = 1; i < n - 1; i++)
     {

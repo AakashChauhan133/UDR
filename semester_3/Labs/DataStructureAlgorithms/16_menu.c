@@ -1,7 +1,14 @@
+/*
+ *  Author: Aakash Chauhan
+ *  Date: Aug 16, 2023
+ *  implementation of Stack using array call by value 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #define     MAX     5
 
+// Function definition
 int push(int [], int);
 int pop(int [], int);
 int peek(int [], int);
@@ -9,12 +16,14 @@ void display(int [], int);
 
 int main()
 {
+    // Local decleration
     int a[MAX], top;
     int ch = 1, choice;
     top = -1;
 
     do
     {
+        // Input section
         printf("************MENU************\n");
         printf("[1] Push\n");
         printf("[2] POP\n");
@@ -22,6 +31,8 @@ int main()
         printf("[4] DISPLAY\n");
         printf("[5] EXIT\n");
         scanf("%d", &choice);
+        
+        // calling according choice
         switch (choice)
         {
         case 1:
@@ -47,6 +58,9 @@ int main()
 
 int push(int a[], int top)
 {
+    // push value at the top of stack
+    // that is push at the last of array
+
     int val;
     if(top >= MAX - 1)
         printf("Stack is full\n");
@@ -59,8 +73,12 @@ int push(int a[], int top)
     }
     return top;
 }
+
 int pop(int a[], int top)
 {
+    // Pop from the top of stack
+    // ie. remove from last of array (shrink array from last)
+
     if (top == -1)
     {
         printf("Stack is empty\n");
@@ -70,8 +88,11 @@ int pop(int a[], int top)
     top--;
     return top;
 }
+
 int peek(int a[], int top)
 {
+    // Print value at the top of stack
+
     if (top == -1)
     {
         printf("Stack is empty\n");
@@ -79,8 +100,12 @@ int peek(int a[], int top)
     }
     return a[top];
 }
+
 void display(int a[], int top)
 {
+    // Display from top to bottom of stack
+    // ie. print array in reverse order
+     
     int i;
     if (top == -1)
     {

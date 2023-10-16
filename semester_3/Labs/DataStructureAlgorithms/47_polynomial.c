@@ -8,9 +8,8 @@ struct ListNode
     struct ListNode *next;
 };
 
-
-struct ListNode * create();
-struct ListNode * add_poly(struct ListNode *, struct ListNode *);
+struct ListNode *create();
+struct ListNode *add_poly(struct ListNode *, struct ListNode *);
 void display(struct ListNode *);
 int main()
 {
@@ -21,7 +20,6 @@ int main()
     display(poly1);
     system("cls");
     getch();
-
 
     poly2 = create();
     getch();
@@ -39,11 +37,11 @@ int main()
     return 0;
 }
 
-struct ListNode * create()
+struct ListNode *create()
 {
     struct ListNode *p = NULL, *head = NULL, *tail = NULL;
     int ch = 1;
-    while(ch)
+    while (ch)
     {
         p = (struct ListNode *)malloc(sizeof(struct ListNode));
         printf("Enter the exp: ");
@@ -64,7 +62,7 @@ struct ListNode * create()
     p->next = NULL;
     return head;
 };
-struct ListNode * add_poly(struct ListNode *poly1, struct ListNode *poly2)
+struct ListNode *add_poly(struct ListNode *poly1, struct ListNode *poly2)
 {
     struct ListNode *head = NULL, *tail = NULL, *p = NULL;
     while (poly1 && poly2)
@@ -73,12 +71,11 @@ struct ListNode * add_poly(struct ListNode *poly1, struct ListNode *poly2)
         if (poly1->ex == poly2->ex)
         {
             p->co = poly1->co + poly2->co;
-            p->ex = poly1->e
-struct ListNode* sort(struct ListNode *head);x;
+            p->ex = poly1->ex;
             poly1 = poly1->next;
             poly2 = poly2->next;
         }
-        else if(poly1->co > poly2->co)
+        else if (poly1->co > poly2->co)
         {
             p->co = poly1->co;
             p->ex = poly1->ex;
@@ -98,24 +95,24 @@ struct ListNode* sort(struct ListNode *head);x;
             tail = p;
         }
     }
-//    while (poly1 != NULL)
-//    {
-//        p = (struct ListNode *)malloc(sizeof(struct ListNode));
-//        p->co = poly1->co;
-//        p->ex = poly1->ex;
-//        tail->next = p;
-//        tail = p;
-//        poly1 = poly1->next;
-//    }
-//    while (poly2 != NULL)
-//    {
-//        p = (struct ListNode *)malloc(sizeof(struct ListNode));
-//        p->co = poly2->co;
-//        p->ex = poly2->ex;
-//        tail->next = p;
-//        tail = p;
-//        poly2 = poly2->next;
-//    }
+    //    while (poly1 != NULL)
+    //    {
+    //        p = (struct ListNode *)malloc(sizeof(struct ListNode));
+    //        p->co = poly1->co;
+    //        p->ex = poly1->ex;
+    //        tail->next = p;
+    //        tail = p;
+    //        poly1 = poly1->next;
+    //    }
+    //    while (poly2 != NULL)
+    //    {
+    //        p = (struct ListNode *)malloc(sizeof(struct ListNode));
+    //        p->co = poly2->co;
+    //        p->ex = poly2->ex;
+    //        tail->next = p;
+    //        tail = p;
+    //        poly2 = poly2->next;
+    //    }
     if (poly1 != NULL)
     {
         tail->next = poly1;
@@ -125,10 +122,10 @@ struct ListNode* sort(struct ListNode *head);x;
         tail->next = poly2;
     }
 
-    //tail->next = NULL;
+    // tail->next = NULL;
     return head;
 };
-void display(struct ListNode * head)
+void display(struct ListNode *head)
 {
     while (head)
     {

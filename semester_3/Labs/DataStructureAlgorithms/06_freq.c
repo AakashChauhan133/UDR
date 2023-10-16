@@ -7,22 +7,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Function decleration
 void insert(int *, int);
-
-void method1(int *, int);
+void freq(int *, int);
 
 int main()
 {
     // Local decleration
     int *arr, n, i;
+
     // Dynamic allocation
     arr = (int *)malloc(n * sizeof(int));
+
     // Input Section
     printf("Enter the size of array: ");
     scanf("%d", &n);
     insert(arr, n);
 
-    method1(arr, n);
+    // function calling
+    freq(arr, n);
 
     return 0;
 }
@@ -39,8 +42,11 @@ void insert(int *a, int n)
     }
 }
 
-void method1(int *nums, int n)
+void freq(int *nums, int n)
 {
+    // Function to calculate frequency of each element
+    // If element is counted then replace it with -9
+
     int i, j, count = 0;
     for (i = 0; i < n; i++)
     {
@@ -52,7 +58,7 @@ void method1(int *nums, int n)
                 if (nums[j] == nums[i])
                 {
                     count++;
-                    nums[j] = -9;
+                    nums[j] = -9;   // Counted then replace with -9
                 }
             }
             printf("Freq of %d is %d\n", nums[i], count);

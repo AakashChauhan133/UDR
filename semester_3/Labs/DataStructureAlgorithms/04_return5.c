@@ -7,13 +7,13 @@
 #include <stdio.h>
 #define     MAX     5
 
-void method1(float *);
+void RETURN_5(float *);
 
 int main()
 {
     // Local decleration
     float ans[MAX];
-    method1(ans);
+    RETURN_5(ans);
 
     // Output
     printf("Sum = %f\n", ans[0]);
@@ -24,7 +24,7 @@ int main()
 
     return 0;
 }
-void method1(float *n)
+void RETURN_5(float *n)
 {
     // Called by refrence
     float a, b;

@@ -20,9 +20,11 @@ int main()
 {
     // Local decleration
     int *a, *b, m, n;
+
     // Dynamic allocation
     a = (int *)malloc(n * sizeof(int));
     b = (int *)malloc(n * sizeof(int));
+
     // Input section
     insert(a, &m);
     insert(b, &n);
@@ -38,7 +40,7 @@ int main()
 
 void insert(int *a, int *n)
 {
-    // Function to insert n elements in an array
+    // Function to insert n elements in an array as set
 
     printf("Enter the size of array: ");
     scanf("%d", n);
@@ -49,6 +51,7 @@ void insert(int *a, int *n)
         scanf("%d", (a + i));
     }
     printf("\nOriginal: ");
+    removedup(a, n);
     disp(a, *n);
 }
 
@@ -64,6 +67,8 @@ void disp(int *a, int n)
 
 void intersection(int *a, int *b, int m, int n)
 {
+    // Function to find interserion of two sets a and b and store result in set
+
     int i = 0, j, set[MAX], x;
     x = 0;
     for (i = 0; i < m; i++)
@@ -79,6 +84,8 @@ void intersection(int *a, int *b, int m, int n)
 
 void uni(int *a, int *b, int m, int n)
 {
+    // Function to find Union of two sets a and b and store result in set
+    
     int i = 0, j, set[MAX], x, f;
     x = 0;
     for (i = 0; i < m; i++)
@@ -95,6 +102,9 @@ void uni(int *a, int *b, int m, int n)
 
 void removedup(int *set, int * x)
 {
+    // Function to remove duplticate elements
+    // Because set don't have duplicate elements
+
     int i, j;
     for (i = 0; i < *x; i++)
     {

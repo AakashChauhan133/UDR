@@ -1,7 +1,7 @@
 /*
  *  Author: Aakash Chauhan
  *  Date: Aug 3, 2023
- *  Program to delete alternate elements of an array
+ *  Program to delete alternate elements of an array (dynamic array)
  */
 
 #include <stdio.h>

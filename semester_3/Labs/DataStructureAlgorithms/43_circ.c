@@ -8,7 +8,7 @@ typedef struct list
 }c;
 
 void display_single(c*);
-void display_double(c*);
+void display_circ(c*);
 
 
 int main()
@@ -37,7 +37,7 @@ int main()
 
     // Converting singly linked list to doubly linked list
     last->next = head;
-    display_double(last);
+    display_circ(last);
 
 
     return 0;
@@ -53,7 +53,7 @@ void display_single(c* head)
     }
     printf("\n");
 }
-void display_double(c *last)
+void display_circ(c *last)
 {
     // Bring it to first
     last = last->next;

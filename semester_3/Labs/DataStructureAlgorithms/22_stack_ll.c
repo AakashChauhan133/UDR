@@ -1,3 +1,9 @@
+/*
+ *  Author      :   Aakash Chauhan
+ *  Date        :   September 4, 2023
+ *  Problem     :   stack using linked list
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -15,6 +21,7 @@ void display(stk *);
 
 int main()
 {
+    // Local decleration
     stk *top = NULL;
     int ch = 1;
 
@@ -24,9 +31,10 @@ int main()
         printf("[1] Push\n");
         printf("[2] Pop\n");
         printf("[3] Display\n");
-        printf("[3] Exit\n");
+        printf("[4] Exit\n");
         scanf("%d", &ch);
 
+        // calling according choice
         switch (ch)
         {
         case 1:
@@ -50,13 +58,16 @@ int main()
 
 stk* push(stk *top)
 {
+    // push on the top of stack
+    // insert at the left of linked list
+
     int val;
     stk *p = NULL;
     p = (stk *)malloc(sizeof(stk));
 
     if (!p)
     {
-        printf("Stack Full\n");
+        printf("No memory\n");
         return top;
     }
     printf("Enter the value: ");
@@ -69,8 +80,11 @@ stk* push(stk *top)
 
 stk *pop(stk *top)
 {
+    // pop value from top of stack
+    // remove first node of linked list
+
     stk *p = NULL;
-    if (!top)
+    if (top == NULL)
     {
         printf("Stack Empty\n");
         return top;
@@ -83,6 +97,7 @@ stk *pop(stk *top)
 
 void display(stk *left)
 {
+    // Display linked list in forward manner
     if (!left)
     {
         printf("Stack Empty\n");

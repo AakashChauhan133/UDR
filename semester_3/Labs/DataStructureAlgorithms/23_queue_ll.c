@@ -1,3 +1,9 @@
+/*
+ *  Author      :   Aakash Chauhan
+ *  Date        :   September 4, 2023
+ *  Problem     :   queue using linked list
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -15,6 +21,7 @@ void display(q *);
 
 int main()
 {
+    // Local decleration
     q *rear = NULL, *front = NULL;
     int ch = 1;
 
@@ -27,6 +34,7 @@ int main()
         printf("[4] Exit\n");
         scanf("%d", &ch);
 
+        // calling according choice
         switch (ch)
         {
         case 1:
@@ -54,6 +62,9 @@ int main()
 
 q* enq(q *rear)
 {
+    // insert at the last of the queue
+    // insert at the left of queue
+    
     int val;
     q *p = NULL;
     p = (q *)malloc(sizeof(q));
