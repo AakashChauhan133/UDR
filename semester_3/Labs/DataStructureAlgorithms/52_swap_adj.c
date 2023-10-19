@@ -83,7 +83,6 @@ void swap(node **first)
     if (*first == NULL)
     {
         printf("NO NODE\n");
-        ;
         return;
     }
     if ((*first)->next == NULL)

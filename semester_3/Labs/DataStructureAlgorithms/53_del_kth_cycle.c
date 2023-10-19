@@ -23,6 +23,7 @@ typedef struct ListNode
 // Function defintion
 void create(node **, node **);
 void display(node *);
+void alt_k_del(node **, int);
 
 int main()
 {
@@ -41,8 +42,10 @@ int main()
         printf("ENTER THE VALUE IN NODE %d: ", i + 1);
         create(&first, &last);
     }
+    printf("ORIGINAL: ");
     display(first);
-    alt_k_del(&first);
+    alt_k_del(&first, k);
+    printf("AFTER DELETED: ");
     display(first);
 
     return 0;
@@ -78,4 +81,47 @@ void display(node *first)
         printf("%d ", first->data);
         first = first->next;
     }
+    printf("\n");
+}
+
+void alt_k_del(node **first, int k)
+{
+    int count;
+    node * p = *first, *q = NULL;
+    if (*first == NULL)
+    {
+        printf("EMPTY LIST\n");
+        return;
+    }
+    if (k == 1)
+    {
+        // k = 1 means all nodes to be deleted
+        *first = NULL;
+        return;
+    }
+    count = 0;  // node counter 
+    while (p)
+    {
+        count++;
+        if (count == k)
+        {
+            // when node counter is k
+            // in this block p will never hold address of first node because k = 1 issue is resolved already
+            /*
+                Assume if we don't handle k = 1 (ie. delete all node) then in this if block q is pointing to null
+                q = NULL and p = *first
+                ERROR:
+                    q->next (ie. NULL->next) this do not exist
+            */
+            q->next = p->next;
+            free(p);
+            p = q->next;
+            count = 0;
+            continue;
+        }
+        // q is following p 
+        q = p;
+        p = p->next;
+    }
+    
 }
