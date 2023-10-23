@@ -33,6 +33,12 @@ void preorder(bst *);
 void inorder(bst *);
 void postorder(bst *);
 int count(bst *);
+int count_left(bst *);
+int count_right(bst *);
+int count_both(bst *);
+int highest(bst *);
+int lowest(bst *);
+
 
 int main()
 {
@@ -48,6 +54,13 @@ int main()
         printf("3. Inorder\n");
         printf("4. Postorder\n");
         printf("5. Count total number of nodes\n");
+        printf("6. Count total number of nodes having only left child\n");
+        printf("7. Count total number of nodes having only right child\n");
+        printf("8. Count total number of nodes having both children\n");
+        printf("9. Count nodes left hand side of root\n");
+        printf("10. Count nodes right hand side of root\n");
+        printf("11. Print the node having having highest info in BST\n");
+        printf("12. Print the node having having lowest info in BST\n");
         scanf("%d", &ch);
         switch (ch)
         {
@@ -68,12 +81,41 @@ int main()
             printf("\n");
             break;
         case 4:
-            printf("Inorder: ");
+            printf("Postorder: ");
             postorder(root);
             printf("\n");
             break;
         case 5:
             printf("Count: %d", count(root));
+            printf("\n");
+            break;
+            break;
+        case 6:
+            printf("Count: %d", count_left(root));
+            printf("\n");
+            break;
+        case 7:
+            printf("Count: %d", count_right(root));
+            printf("\n");
+            break;
+        case 8:
+            printf("Count: %d", count_both(root));
+            printf("\n");
+            break;
+        case 9:
+            printf("Count: %d", count(root->left));
+            printf("\n");
+            break;
+        case 10:
+            printf("Count: %d", count(root->right));
+            printf("\n");
+            break;
+        case 11:
+            printf("highest: %d", highest(root));
+            printf("\n");
+            break;
+        case 12:
+            printf("lowest: %d", lowest(root));
             printf("\n");
             break;
         default:
@@ -143,12 +185,13 @@ void postorder(bst *root)
     if (root != NULL)
     {
         postorder(root->left);
-        printf("%d ", root->data);
         postorder(root->right);
+        printf("%d ", root->data);
     }
 }
 int count(bst *root)
 {
+    // Count total number of nodes
     int c = 0;
     if (root != NULL)
     {
@@ -157,4 +200,72 @@ int count(bst *root)
         c = c + count(root->right);
     }
     return c;
+}
+
+int count_left(bst *root)
+{
+    // Only having left child
+    // left not null
+    // right null
+    int c = 0;
+    if (root != NULL && root->left != NULL && root->right == NULL)
+    {
+        c++;
+        c = c + count_left(root->left);
+        c = c + count_left(root->right);
+    }
+    return c;
+}
+int count_right(bst *root)
+{
+    // Only having right child
+    // right not null
+    // left null
+    int c = 0;
+    if (root != NULL && root->left == NULL && root->right != NULL)
+    {
+        c++;
+        c = c + count_right(root->left);
+        c = c + count_right(root->right);
+    }
+    return c;
+}
+int count_both(bst *root)
+{
+    // Having both children
+    // left not null
+    // right not null
+    int c = 0;
+    if (root != NULL && root->left != NULL && root->right != NULL)
+    {
+        c++;
+        c = c + count_both(root->left);
+        c = c + count_both(root->right);
+    }
+    return c;
+}
+
+int highest(bst *root)
+{
+    // To find largest value in bst => right most value
+    // considering -1 as outbound value
+    if (root == NULL)
+        return -1;
+    if (root != NULL && root->right == NULL)
+    {
+        return root->data;
+    }
+    return highest(root->right);
+}
+int lowest(bst *root)
+{
+    // To find lowest value in bst => left most value
+    // considering -1 as outbound value
+    if (root == NULL)
+        return -1;
+    if (root != NULL && root->left == NULL)
+    {
+        return root->data;
+    }
+    return lowest(root->left);
 }
