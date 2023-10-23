@@ -24,7 +24,7 @@ The UDR was created on January 14th, 2023.
     - Term Work
     - Practice
     
-### - Semester 2
+### - Semester 3
     - Lab Work
 
 ## Maintainers
