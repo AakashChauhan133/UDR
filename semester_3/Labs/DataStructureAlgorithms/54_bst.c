@@ -1,7 +1,9 @@
 /*
  *  Author      :   Aakash Chauhan
+ *  Section     :   IoT
+ *  Roll No     :   01
  *  Date        :   October 23, 2023
- *  Problem     :   Operations on BST
+ *  Problem     :   Operations on BST (call by value)
  *                  1.  Preorder
  *                  2.  Inorder
  *                  3.  Post order
@@ -38,7 +40,7 @@ int count_right(bst *);
 int count_both(bst *);
 int highest(bst *);
 int lowest(bst *);
-
+bst *delete(bst *, int);
 
 int main()
 {
@@ -61,6 +63,7 @@ int main()
         printf("10. Count nodes right hand side of root\n");
         printf("11. Print the node having having highest info in BST\n");
         printf("12. Print the node having having lowest info in BST\n");
+        printf("13. Delete value\n");
         scanf("%d", &ch);
         switch (ch)
         {
@@ -118,6 +121,11 @@ int main()
             printf("lowest: %d", lowest(root));
             printf("\n");
             break;
+        case 13:
+            printf("Enter the value to delete: ");
+            scanf("%d", &n);
+            root = delete (root, n);
+            break;
         default:
             break;
         }
@@ -125,6 +133,7 @@ int main()
 
     return 0;
 }
+
 // function definition
 bst *create(bst *root, int val)
 {
@@ -268,4 +277,50 @@ int lowest(bst *root)
         return root->data;
     }
     return lowest(root->left);
+}
+
+bst *delete(bst *root, int val)
+{
+    if (root == NULL)
+    {
+        printf("NOT FOUND\n");
+        return root;
+    }
+    if (val < root->data)
+    {
+        root->left = delete(root->left, val);
+    }
+    else if (val > root->data)
+    {
+        root->right = delete(root->right, val);
+    }
+    else
+    {
+        // case of found val == root data is true
+        if (root->left == NULL){
+            bst * p = root->right;
+            free(root);
+            return p;
+        }
+        else if (root->right == NULL){
+            bst * p = root->left;
+            free(root);
+            return p;
+        }
+        else 
+        {
+            // here nothing is null
+            bst *p = root, *temp = root->right;
+            while (temp->left)
+            {
+                // finding inder sussesor
+                temp = temp->left;
+            }
+            temp->left = p->left;
+            // replacing root with root right 
+            root = root->right;
+            free(p);
+        }
+    }
+    return root;
 }
