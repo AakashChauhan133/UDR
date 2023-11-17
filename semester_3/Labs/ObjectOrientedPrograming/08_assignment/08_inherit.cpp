@@ -1,19 +1,32 @@
-#include <iosteam>
+#include <iostream>
 
 using namespace std;
 
 class Base
 {
 private:
-    int priv;
+    int a;
 protected:
-    int prot;
+    int b;
 public:
-    int pub;
+    int c;
+};
+
+class Derived:public Base
+{
+public:
+    void show()
+    {
+//        cout << a << endl; // Error
+        cout << b << endl;
+        cout << c << endl;
+    }
 };
 
 int main()
 {
+    Derived ob;
+    ob.show();
 
     return 0;
 }
