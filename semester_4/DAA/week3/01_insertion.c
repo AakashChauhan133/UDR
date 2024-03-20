@@ -1,7 +1,14 @@
+/*
+    Author  :   Aakash Chauhan
+    Date    :   Feb 16, 2024
+    Given an unsorted array of integers, design an algorithm and a program to sort the array using insertion sort. Your program should be able to find number of comparisons and shifts ( shifts total number of times the array elements are shifted from their place) required for sorting the array.
+ */
 
 #include <stdio.h>
 #define MAX 10
 
+int comp = 0; 
+int shift = 0;
 
 void create(int [], int);
 void display(int [], int);
@@ -16,7 +23,7 @@ int main()
     sort(a, n);
     display(a, n);
 
-
+    printf("shifts = > %d\ncomparison => %d\n", shift, comp);
     return 0;
 }
 
@@ -49,8 +56,10 @@ void sort(int a[], int n)
         temp = a[i];
         j = i - 1;
 
+        shift++;
         while (j >= 0 && temp < a[j])
         {
+            shift++, comp++;
             a[j+1] = a[j];
             j--;
         }
